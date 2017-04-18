@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/cowboy/node-exit"
-
-    >exit (v0.1.2)</a>
+    <a href="https://github.com/cowboy/node-exit">exit (v0.1.2)</a>
 </h1>
 <h4>A replacement for process.exit that ensures stdio are fully drained before exiting.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.exit">module exit</a><ol>
 
@@ -99,7 +92,7 @@
     if (stream.bufferSize === 0) {
       drainCount++;
     } else {
-      stream.write(&#x27;&#x27;, &#x27;utf-8&#x27;, function() {
+      stream.write('', 'utf-8', function() {
         drainCount++;
         tryToExit();
       });
@@ -112,24 +105,24 @@
   // In Windows, when run as a Node.js child process, a script utilizing
   // this library might just exit with a 0 exit code, regardless. This code,
   // despite the fact that it looks a bit crazy, appears to fix that.
-  process.on(&#x27;exit&#x27;, function() {
+  process.on('exit', function() {
     process.exit(exitCode);
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```javascript
-var exit = require(&#x27;exit&#x27;);
+var exit = require('exit');
 
 // These lines should appear in the output, EVEN ON WINDOWS.
-console.log(&#x22;omg&#x22;);
-console.error(&#x22;yay&#x22;);
+console.log("omg");
+console.error("yay");
 
 // process.<span class="apidocCodeKeywordSpan">exit</span>(5);
 exit(5);
 
-// These lines shouldn&#x27;t appear in the output.
-console.log(&#x22;wtf&#x22;);
-console.error(&#x22;bro&#x22;);
+// These lines shouldn't appear in the output.
+console.log("wtf");
+console.error("bro");
 ```
 ...</pre></li>
     </ul>
@@ -143,3 +136,4 @@ console.error(&#x22;bro&#x22;);
     ]
 </div>
 </div>
+</body></html>
